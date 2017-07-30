@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>SiriForWebDeveloping</title>
+    </head>
+    <body>
+        <textarea rows="4" cols="50">
+            
+        </textarea>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+        <script>
+        if (annyang) {
+            // Add our commands to annyang
+            annyang.addCommands({
+                'create *domElement': function(domElement) { 
+                    alert(domElement)
+                 }
+            });
+
+            annyang.start();
+            // // Tell KITT to use annyang
+            // SpeechKITT.annyang();
+
+            // // Define a stylesheet for KITT to use
+            // SpeechKITT.setStylesheet('https://cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+
+            // // Render KITT's interface
+            // SpeechKITT.vroom();
+        }
+        </script>
+        <script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
