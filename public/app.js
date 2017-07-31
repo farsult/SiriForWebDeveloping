@@ -1,14 +1,17 @@
 if (annyang) {
     var textArea = $('textarea');
     annyang.addCommands({
-        'define (a) *domElement': function(domElement) {
+        'add (a) *domElement': function(domElement) {
             switch(domElement){
-                case "function": console.log("function(){}") 
+                case "title": textArea.text("function(){}") 
                     break
-                case "variable": console.log("var")
+                case "table": textArea.text("var")
                     break 
-                default: console.log(domElement)
+                default: textArea.text(domElement)
             }
+        },
+        'html init': function(){
+            textArea.text() ? alert("Do you want to create new template?") : textArea.text("<html><head><title></title></head><body></body></html>")
         }
     });
 
